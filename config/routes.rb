@@ -6,8 +6,10 @@ Rails.application.routes.draw do
   get '/pages/contact'
   get '/pages/about'
   get '/pages/help'
+
+  resources :users
   
-  root 'pages#signup'
+  root 'users#new'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
