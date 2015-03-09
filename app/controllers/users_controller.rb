@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 		@user  = User.new(user_params)
 		if @user.save
 			session[:user_id] = @user.id
-			redirect_to '/pages/about'
+			redirect_to pages_about_path #'/pages/about'
 		else
 			redirect_to '/users/new'
 		end
